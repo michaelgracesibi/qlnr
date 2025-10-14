@@ -1,0 +1,106 @@
+.top-10-list {
+    width: 100%;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+/* .rank {
+    font-family: "Bevan";
+    margin-right: 4rem;
+    font-size: 5rem;
+} */
+
+.channel_name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.key1 {
+    color: #ffd700;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.attribute {
+    color: #666;
+    font-size: 16px;
+}
+
+.top-10-list .list-item {
+    margin-bottom: 20px;
+    /* Space between items */
+}
+
+.top-10-list .attribute {
+    display: block;
+    /* Ensures each attribute takes a new line */
+    margin-bottom: 5px;
+    /* Adds space between attributes */
+    word-wrap: break-word;
+    /* Ensures long words break and do not overflow */
+}
+
+.top-10-list .rank {
+    font-weight: bold;
+    /* Makes the rank stand out */
+    margin-bottom: 10px;
+    /* Space after rank */
+}
+
+.key-class {
+    font-family: "Inter", serif !important;
+    font-weight: 700;
+}
+
+.value-class {
+    font-family: "Inter", serif !important;
+}
+
+@media only screen and (max-width:768px) {
+    .dcr-1m887w9 {
+        display: none !important;
+    }
+
+    /* .rank {
+        margin-right: 2rem !important;
+    } */
+}
+
+.rank-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 4rem; /* Align with your existing rank margin */
+}
+
+.rank {
+    font-family: "Bevan";
+    font-size: 5rem;
+    margin: 0; /* Ensure consistent spacing */
+    position: relative; /* Required for the absolute positioning of the image */
+    z-index: 1; /* Ensure the rank is above the image */
+}
+
+.profile-pic {
+    position: absolute;
+    bottom: -1px; /* Adjust to slightly overlap but not obscure */
+    right: -25px; /* Align closely to the rank number */
+    width: auto; /* Set a size proportional to the rank number */
+    height: 3rem; /* Maintain square aspect ratio */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
+    z-index: 4; /* Place behind the rank number */
+}

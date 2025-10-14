@@ -1,0 +1,79 @@
+/* Define the variable for the font */
+:root {
+    --s-caption: 'Rachana';
+    --s-hint: 'AnekMalayalam';
+    --s-pagetitle: 'NotoSerifMalayalam';
+    --s-author: 'Karumbi';
+    --s-detail: 'AnekMalayalam';
+    --s-recommended-post-title: 'Keraleeyam';
+    --s-readmore: 'AnekMalayalam';
+    --s-fund: 'Rachana';
+    --s-sidebar-head: 'NotoSerifMalayalam';
+    --s-sidebarposttitle: 'NotoSerifMalayalam';
+    --s-sidebarplace: 'AnekMalayalam';
+    --s-bottom-opinion-head: 'Keraleeyam';
+    --s-related-post-title: 'NotoSerifMalayalam';
+}
+.s-caption {
+    font-family: var(--s-caption) !important;
+    line-height: .5;
+}
+.s-hint {
+    font-family: var(--s-hint) !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+}
+.s-pagetitle {
+    font-family: var(--s-pagetitle) !important;
+    font-weight: 700 !important;
+    font-size: 30px !important;
+    line-height: 1.1 !important;
+    color: #004999 !important;
+}
+.s-author {
+    font-family: var(--s-author) !important;
+    font-size: 25px !important;
+    font-weight: 900 !important;
+}
+.s-detail {
+    font-family: var(--s-detail) !important;
+    font-size: 15px !important;
+}
+.s-recommended-post-title {
+    font-family: var(--s-recommended-post-title) !important;
+}
+.s-readmore {
+    font-family: var(--s-readmore) !important;
+}
+.s-fund {
+    font-family: var(--s-fund) !important;
+    font-weight: 700 !important;
+    color: rgb(90, 90, 90) !important;
+}
+.s-sidebar-head {
+    font-family: var(--s-sidebar-head) !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+}
+.s-sidebarposttitle {
+    font-family: var(--s-related-post-title) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+.s-sidebarplace {
+    font-family: var(--s-sidebarplace) !important;
+}
+.s-bottom-opinion-head {
+    font-family: var(--s-bottom-opinion-head) !important;
+    font-weight: 100 !important;
+}
+.s-related-post-title {
+    font-family: var(--s-related-post-title) !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+    line-height: .8 !important;
+}
+.singlelayoutimage {
+    border-radius: 8px !important;
+}

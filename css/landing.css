@@ -1,0 +1,67 @@
+/* Define the variable for the font */
+:root {
+    --main-bg: #0039a6;
+    --top-bg: #002D62;
+    --nav-text: rgb(255, 255, 255);
+    --news-tip: 'ManchariUniN';
+}
+/* Example usage */
+.menu {
+    font-family: var(--menu-font) !important;
+    color: var(--nav-text) !important; /* This will work now */
+}
+.btxt {
+    color:#002D62 !important;
+}
+.bighead {
+    font-family: var(--bighead) !important;
+    font-weight: 100 !important;
+    text-decoration: none !important;
+}
+.subject {
+    font-family: var(--subject) !important;
+    font-weight: 500 !important;
+}
+.description {
+    font-family: var(--description) !important;
+    font-weight: 400 !important;
+}
+.comment {
+    font-family: var(--subject) !important;
+    font-weight: 500 !important;
+    color: red !important;
+    text-decoration: none !important;
+}
+.td {
+    text-decoration: none !important;
+    font-size: smaller !important;
+}
+.td:hover, .posthead:hover, .subject:hover, .description:hover, .ftmenu:hover {
+    transform: scale(1) !important; /* Slightly enlarge the text */
+    color: #002e60 !important; /* Change to a professional color on hover */
+    text-decoration: none !important;
+}
+.newstip {
+    font-family: var(--news-tip) !important;
+    font-size: 12px !important;
+    color: rgb(184, 1, 1) !important;
+}
+.mainbar {
+    background-color: #121212 !important;
+}
+.topbar {
+    background-color: #212121 !important;
+}
+
+.fJjkCp {
+    display: none !important;
+}
+
+.shareNews {
+    font-family: 'NotoSerifMalayalam' !important;
+    font-weight: 700 !important;
+}
+.tqwarn {
+    font-family: 'ManchariUniN' !important;
+    font-weight: 700 !important;
+}

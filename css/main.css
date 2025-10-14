@@ -1,0 +1,96 @@
+/* Define the variable for the font */
+:root {
+    --g-timeago: 'Roboto';
+    --g-what-others-reading: 'Keraleeyam';
+    --g-bottom-nav: 'AnekMalayalam';
+    --g-bold-menu: 'AnekMalayalam';
+    --g-top-nav-menu: 'AnekMalayalam';
+    --g-mainhead: 'Keraleeyam';
+    --g-medium-head: 'Keraleeyam';
+    --g-small-head: 'SindulekhaUniB';
+    --g-quote: 'Karumbi';
+    --g-ftmenu: 'AnekMalayalam';
+    --g-bighead: 'NotoSerifMalayalam';
+    --g-hint: 'AnekMalayalam';
+    --g-short: 'ManchariUniN';
+    --about-head: 'NotoSerifMalayalam';
+    --main-bg: #0039a6;
+    --top-bg: #002D62;
+    --nav-text: rgb(255, 255, 255);
+}
+.timeago {
+    font-family: var(--g-timeago) !important;
+    font-weight: 500 !important;
+}
+.g-what-others-reading {
+    font-family: var(--g-what-others-reading) !important;
+    color: red;
+}
+.g-bottom-nav {
+    font-family: var(--g-bottom-nav) !important;
+    color: white !important;
+
+}
+.g-bold-menu {
+    font-family: var(--g-bold-menu) !important;
+}
+.g-top-nav-menu {
+    font-family: var(--g-top-nav-menu) !important;
+    color: white;
+}
+.ftmenu {
+    font-family: var(--g-ftmenu) !important;
+    color: #434343 !important;
+}
+.bighead {
+    font-family: var(--g-bighead) !important;  
+    font-weight: 500 !important;
+    line-height: .2 !important;
+}
+.g-hint {
+    font-family: var(--g-hint) !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+.mainhead {
+    font-family: var(--g-mainhead) !important;
+    font-weight: 100 !important;
+    line-height: .1 !important;
+    font-size: 30px !important;
+}
+.g-medium-head {
+    font-family: var(--g-medium-head) !important;
+    font-size: 24px !important;
+    font-weight: 100 !important;
+    line-height: .7 !important;
+    color: #002D62 !important;
+}
+.g-small-head {
+    font-family: var(--g-small-head) !important;
+    font-size: 17px !important;
+    line-height: .4 !important;
+}
+.g-list-head {
+    font-family: var(--g-small-head) !important;
+    font-size: 19px !important;
+    line-height: 1 !important;
+}
+.g-side-head {
+    font-family: var(--g-small-head) !important;
+    font-size: 17px !important;
+}
+.short {
+    font-family: var(--g-short) !important;
+    font-weight: 100 !important;
+    font-size: 14px !important;    
+}
+.g-quote {
+    font-family: var(--g-quote) !important;
+    font-size: 25px !important;
+    line-height: .8 !important;
+    font-weight: 900 !important;
+}
+.about-head {
+    font-family: var(--about-head) !important;
+    font-size: 10px !important;
+}

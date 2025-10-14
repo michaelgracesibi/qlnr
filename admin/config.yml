@@ -1,0 +1,161 @@
+# using git as backend store
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "/static/media" # Folder where user uploaded files should go
+public_folder: "/media"
+editor:
+  preview: true
+locale: 'en'
+
+# Allow local visit
+# You need to run at the root of the project `npx netlify-cms-proxy-server`
+local_backend: true
+
+# collections configuration
+collections:
+  - name: "temp"
+    label: "Temp"
+    folder: "content/temp"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "source", label: "Source", widget: "string", required: false }
+      - { name: "sitemap", label: "Sitemap", widget: "object", fields: [{ name: "disable", label: "Disable", widget: "boolean", default: false, hint: "Disable sitemap for this post" }], required: false }
+      - { name: "type", label: "Type", widget: "select", options: ["post", "page"], default: "post", required: false }
+      - { name: "category", label: "Category", widget: "select", options: ["Politics", "War", "Technology", "Science", "Finance", "Economics", "Disaster", "Lifestyle", "Culture", "Auto", "Career", "Opinion", "Pixel Story"], required: false }
+      - { name: "author", label: "Author", widget: "select", options: ["Alice Kunjumon", "Deepa Vellikal", "Mini Mathew", "Luke Anttappan", "Francis Kattookaran", "Mathai Palayil", "Sneha Mariyam"], required: false } 
+      - { name: "authorml", label: "Author ML", widget: "select", options: ["ആലീസ് കുഞ്ഞുമോൻ", "ദീപ വെള്ളിക്കൽ", "മിനി മാത്യു", "ലൂക്ക് ആൻ്റപ്പൻ", "ഫ്രാൻസിസ് കാട്ടൂക്കാരൻ", "മത്തായി പാലയിൽ", "സ്നേഹ മറിയം"], required: false } 
+      - { name: "author_image", label: "Author Image", widget: "select", options: [{ label: "Alice Kunjumon", value: "https://shorturl.at/S9jeW" }, { label: "Deepa Vellikal", value: "https://shorturl.at/47Hbq" }, { label: "Mini Mathew", value: "https://tinyurl.com/ztenb7cs" }, { label: "Luke Anttappan", value: "https://tinyurl.com/48wjfc2n" }, { label: "Francis Kattookaran", value: "https://shorturl.at/Qnufs" }, { label: "Mathai Palayil", value: "https://tinyurl.com/yzy92ee7" }, { label: "Sneha Mariyam", value: "https://tinyurl.com/4tcrhtwm" }], required: false }
+      - { name: "slug", label: "Slug", widget: "string", required: false }      
+      - { name: "title", label: "Title", widget: "string", required: false }
+      - { name: "pagetitle", label: "Page Title", widget: "string", required: false }
+      - { name: "description", label: "SEO Description", widget: "text", required: false }
+      - { name: "descriptionml", label: "Description ML", widget: "text", required: false }
+      - { name: "caption", label: "Caption", widget: "text", required: false }
+      - { name: "keywords", label: "SEO Keywords", widget: "text", required: false }
+      - { name: "keywordsml", label: "SEO Keywords ML", widget: "text", required: false }    
+      - { name: "hint", label: "Hint", widget: "string", required: false } 
+      - { name: "subject", label: "Subject", widget: "string", required: false } 
+      - { name: "place", label: "Place", widget: "string", required: false }   
+      - { name: "featured", label: "Featured Image", widget: "image", required: false }  
+      - { name: "prelude", label: "Prelude", widget: "markdown", required: false }    
+      - { name: "body", label: "Body", widget: "markdown", required: false }
+
+  - name: "featured"
+    label: "Featured"
+    folder: "content/feat"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { label: "Type", name: "type", widget: "select", options: ["post", "page"], default: "post" }
+      - { name: "sitemap", label: "Sitemap", widget: "object", fields: [{ name: "disable", label: "Disable", widget: "boolean", default: false, hint: "Disable sitemap for this post" }] }
+      - { name: "author", label: "Author", widget: "select", options: ["Alex M", "Gracy M", "Michael A", "Josephine M"] }
+      - { name: "category", label: "Category", widget: "select", options: ["Politics", "War", "Technology", "Science", "Finance", "Economics", "Auto", "Career", "Opinion", "Pixel Story", "Culture", "Life Style"] }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "pagetitle", label: "Page Title", widget: "string" }
+      - { name: "description", label: "SEO Description", widget: "text" }
+      - { name: "keywords", label: "SEO Keywords", widget: "text" }      
+      - { name: "place", label: "Place", widget: "string" }
+      - { name: "hint", label: "Hint", widget: "string" } 
+      - { name: "topic", label: "Alert Topic", widget: "string" }
+      - { name: "sidebar", label: "Sidebar Text", widget: "text" }
+      - { name: "sidebar2", label: "Sidebar Text2", widget: "text" }
+      - { name: "ind1", label: "Indicator One", widget: "string" }
+      - { name: "ind2", label: "Indicator Two", widget: "string" }
+      - { name: "ind3", label: "Indicator three", widget: "string" }
+      - { name: "featured", label: "Featured Image1", widget: "image", required: false }
+      - { name: "featured2", label: "Featured Image2", widget: "image", required: false }
+      - { name: "featured2cap", label: "Featured Image2 Caption", widget: "string" }
+      - { name: "featured2text", label: "Featured Image2 Text", widget: "markdown" }
+      - { name: "featured3", label: "Featured Image3", widget: "image", required: false }
+      - { name: "featured3cap", label: "Featured Image3 Caption", widget: "string" }
+      - { name: "featured3text", label: "Featured Image3 Text", widget: "markdown" }
+      - { name: "body", label: "Body", widget: "markdown" }
+
+  - name: "quotes"
+    label: "Quotes"
+    folder: "content/quotes"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "sitemap", label: "Sitemap", widget: "object", fields: [{ name: "disable", label: "Disable", widget: "boolean", default: false, hint: "Disable sitemap for this post" }] }
+      - { name: "category", label: "Category", widget: "select", options: ["Politics", "War", "Technology", "Science", "Finance", "Economics", "Auto", "Career", "Opinion", "Pixel Story"] }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "writer", label: "Writer", widget: "string" }     
+      - { name: "featured", label: "Featured Image", widget: "image", required: false }      
+      - { name: "body", label: "Body", widget: "markdown" }
+
+  - name: "pixelstories"
+    label: "Pixel Stories"
+    folder: "content/pixelstories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "pagetitle", label: "Page Title", widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: "featured", label: "Featured Image", widget: "image", required: false }
+      - { label: 'Include in Sitemap', name: 'sitemap_include', widget: 'boolean', default: false }
+      - { name: 'websub', label: 'Websub', widget: 'object', fields: [
+          { name: 'exclude', label: 'Exclude from Websub', widget: 'boolean', default: true }
+        ]
+      }
+
+  - name: "videostories"
+    label: "Video Stories"
+    folder: "content/videostories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "pagetitle", label: "Page Title", widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: "featured", label: "Featured Image", widget: "text", required: false }
+      - { label: 'Include in Sitemap', name: 'sitemap_include', widget: 'boolean', default: false }
+      - { name: 'websub', label: 'Websub', widget: 'object', fields: [
+          { name: 'exclude', label: 'Exclude from Websub', widget: 'boolean', default: true }
+        ]
+      }
+
+  - name: "ads"
+    label: "Advertisements"
+    folder: "content/advertisements"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Referral Link', name: 'referral_link', widget: 'string' }
+      - { label: 'Image', name: 'adimage', widget: 'image' }
+      - { label: 'Include in Sitemap', name: 'sitemap_include', widget: 'boolean', default: false }
+      - { name: 'websub', label: 'Websub', widget: 'object', fields: [
+          { name: 'exclude', label: 'Exclude from Websub', widget: 'boolean', default: true }
+        ]
+      }
+
+  - name: "author"
+    label: "Author"
+    folder: "content/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "name", label: "Name", widget: "string" }
+      - { name: "authordescription", label: "Author Description", widget: "text" }
+      - { name: "authfacebook", label: "Author Facebook", widget: "string" }
+      - { name: "authtwitter", label: "Author Twitter", widget: "string" }
+      - { name: "authlinkedin", label: "Author LinkedIn", widget: "string" }
+      - { name: "authweb", label: "Author Web", widget: "string" }
+      - { name: "authorimg", label: "Author Image", widget: "string" }
+      - { label: 'Include in Sitemap', name: 'sitemap_include', widget: 'boolean', default: false }
+      - { name: 'websub', label: 'Websub', widget: 'object', fields: [
+          { name: 'exclude', label: 'Exclude from Websub', widget: 'boolean', default: true }
+        ]
+      }

@@ -1,0 +1,10 @@
+/* Define the variable for the font */
+:root {
+    --menu-font: 'GuardianSans';
+    --main-bg: #4CAF50;
+}
+/* Example usage */
+.ftmenu {
+    font-family: var(--menu-font) !important;
+    color: var(--ft-nav-text) !important; /* This will work now */
+}
